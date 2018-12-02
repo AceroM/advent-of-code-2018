@@ -1,4 +1,6 @@
 var fs = require('fs');
+var chalk = require('chalk');
+
 const count = (data) => data.reduce((acc, val) => val[0] == '+' ? acc += parseInt(val.slice(1)) : acc -= parseInt(val.slice(1)), 0);
 
 const first_freq = (data) => {
@@ -20,6 +22,6 @@ const first_freq = (data) => {
 fs.readFile('day1.txt', "utf8", (err, data) => {
     if (err) throw err;
     data = data.split('\n');
-    console.log(`Part 1: ${count(data)}`);
-    console.log(`Part 2: ${first_freq(data)}`);
+    console.log(`Part 1: ${chalk.green(count(data))}`);
+    console.log(`Part 2: ${chalk.green(first_freq(data))}`);
 })

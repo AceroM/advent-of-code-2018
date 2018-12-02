@@ -9,6 +9,7 @@
   "author": "AceroM",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.4.1",
     "lodash": "^4.17.11"
   }
 }
