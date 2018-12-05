@@ -44,13 +44,12 @@ let counter = 0
 arr = []
 for (let i = 0; i < 1000; i++) {
     for (let j = 0; j < 1000; j++) {
-        let c = b[i][j].slice(1).split(':')
+        let c = b[i][j].slice(1).split(':').filter(m => m != '')
         if (c.length > 2) counter++
-        arr.push(c.filter(m => m != ''))
-        // console.log(c)
+        console.log(c)
+        arr.push(c)
     }
 }
-console.log(counter)
 
 for (let i of data) {
     let a = i.split(/:|@/)
